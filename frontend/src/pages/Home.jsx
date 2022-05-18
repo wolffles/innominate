@@ -16,6 +16,10 @@ function Home() {
       <Link to='/tickets' className='btn btn-block'>
         <FaTicketAlt /> View My Tickets
       </Link>
+
+      <Link to='/realestate' className='btn btn-block'>
+        <FaTicketAlt /> Real Estate data
+      </Link>
     </>
   )
 }

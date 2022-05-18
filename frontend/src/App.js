@@ -9,6 +9,7 @@ import Register from './pages/Register'
 import NewTicket from './pages/NewTicket'
 import Tickets from './pages/Tickets'
 import Ticket from './pages/Ticket'
+import RealEstate from './pages/RealEstate'
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path='/tickets' element={<PrivateRoute />}>
               <Route path='/tickets' element={<Tickets />} />
             </Route>
+            <Route path='/realestate' element={<RealEstate /> } />
             <Route path='/ticket/:ticketId' element={<PrivateRoute />}>
               <Route path='/ticket/:ticketId' element={<Ticket />} />
             </Route>
