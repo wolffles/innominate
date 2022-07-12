@@ -11,12 +11,12 @@ json_body = requests.get('https://www.reddit.com/r/aquaswap/search.json?sort=new
 
 file = open('reddit_save.txt',mode='r')
 lastPost = file.read()
-if lastPost != str(json_body['data']['children'][0]):
+if lastPost != str(json_body['data']['children'][0]['data']['title']):
     # ping
     requests.get('https://maker.ifttt.com/trigger/aquaswap/json/with/key/klTT3AsU2qDDlGPz4Z0vDkZAs6pGBR2JzQrpReJupRh')
 # creates file errors out if exist
 f = open("reddit_save.txt", "w")
-f.write(str(json_body['data']['children'][0]))
+f.write(str(json_body['data']['children'][0]['data']['title']))
 f.close
 
 
